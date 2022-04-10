@@ -1,56 +1,24 @@
-# Linguaguem-C
-# Atividade para avaliação final da matéria de Linguagem de programação desenvolvida para obtenção de  nota no curso de Analise e Desenvolvimento de Sistemas - Prof Luciano
+# Introdução
 
 
+Essa atividade foi desenvolvida no primeiro semestre do curso de Analise e Desenvolvimento de sistemas do Instituto Federal de São Paulo. A Atividade foi realizada em dupla e a intenção era que nós utilizassemos funções e estrutura de decisão para implementar um programa na linguagem C que oferecia a possibilidade de um professor lançar as notas e faltas dos alunos e escolher algumas opções de retorno, como por exemplo:
 
-#include <stdio.h>
-#include "funcoes.h"
-// TAM define a quantidade de pessoas
-#define TAM 2
-
-int main(void) {
-
-  int opcao, i;
-  Estudante turma[TAM];
-
-  recebeDados(turma, TAM);
-
-  do{
-    
-    apresentaMenu();
-    scanf("%d", &opcao);
-
-    // Switch-case para cada opção, sendo que cada opção chama funções
-    switch (opcao){
-      case 1:
-        printf("Média de idade da turma: %f\n\n", mediaIdade(turma, TAM));
-        break;
-      case 2:
-        printf("Média de frequência da turma: %f\n\n", mediaFrequencia(turma, TAM));
-        break;
-      case 3:
-        printf("Quantidade de reprovados por frequência: %d\n\n", quantidadeReprovadosFreq(turma, TAM));
-        break;
-      case 4:
-        printf("Quantidade de aprovados por média: %d\n\n", quantidadeAprovados(turma, TAM));
-        break;
-      case 5:
-        printf("Média das Médias da Turma: %f\n\n", mediaDaTurma(turma, TAM));
-        break;
-      case 6:
-        printf("Maior Média Final: %f\n\n", maiorMediaFinal(turma, TAM));
-        break;
-      case 7:
-        printf("Menor Média Final: %f\n\n", menorMediaFinal(turma, TAM));
-        break;
-      case 8:
-        printf("Finalizando...\n");
-        break;
-      default:
-        printf("\nOpção inválida, entre novamente.\n\n");
-    }
-
-  } while(opcao != 8); // A opção 8 finaliza o programa
-  
-  return 0;
+// Função que apresenta o menu na tela
+void apresentaMenu(void){
+   // Opções do menu
+    printf("Opção 1: Média de idade da turma;\n");
+    printf("Opção 2: Média de frequência da turma;\n");
+    printf("Opção 3: Quantidade de reprovados por frequência;\n");
+    printf("Opção 4: Quantidade de aprovados por média final;\n");
+    printf("Opção 5: Média da Média Final da turma;\n");
+    printf("Opção 6: Maior Média Final da turma;\n");
+    printf("Opção 7: Menor Média Final da turma;\n");
+    printf("Opção 8: Finaliza o programa.\n");
+    printf("Entre com o opção desejada: ");
 }
+
+
+
+
+
+
